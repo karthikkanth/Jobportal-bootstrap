@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="RCProfessionalForm">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.pincode.invalid && f.pincode.touched}"
+            class="form-control" placeholder="Zipcode" formControlName="pincode">
+        </div>
+        <div *ngIf="f.pincode.errors && f.pincode.touched" class="invalidStatus">
+          <div *ngIf="f.pincode.errors.required">Zipcode is required</div>
+        </div>
+      </div>
+<!--State-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.state.invalid && f.state.touched}"
+            class="form-control" placeholder="State" formControlName="state">
+        </div>
+        <div *ngIf="f.state.errors && f.state.touched" class="invalidStatus">
+          <div *ngIf="f.state.errors.required">State is required</div>
+        </div>
+      </div>
+<!--Alternate Email-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="email" [ngClass]="{'fieldError': f.alternateEmailId.invalid && f.alternateEmailId.touched}" class="form-control"
+            placeholder="Alternate Email" formControlName="alternateEmailId">
+        </div>
+        <div *ngIf="f.alternateEmailId.errors && f.alternateEmailId.touched" class="invalidStatus">
+          <div *ngIf="f.alternateEmailId.errors.required">Alt email is required</div>
+        </div>
+      </div>
+<!--Alternate Phone-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.landlineNumber.invalid && f.landlineNumber.touched}"
+            class="form-control" placeholder="Alternate Phone" formControlName="landlineNumber">
+        </div>
+        <div *ngIf="f.landlineNumber.errors && f.landlineNumber.touched" class="invalidStatus">
+          <div *ngIf="f.landlineNumber.errors.required">Alternate Phone is required</div>
+        </div>
+      </div>
+<!--Terms & conditions-->
+      <div class="col-md-12">
+        <a>
+          <div class="checkbox">
+            <label><input type="checkbox" class="termsAndConditions mr-2" formControlName="isTosRead">I agree to the terms
+              and conditions</label>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-align col-md-12 submitbtn">
+        <!-- <i class="material-icons navigateNextIcon" >navigate_next</i>  -->
+        <button type="submit" mat-raised-button (click)="onSubmitRCProfessionalDetails()">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

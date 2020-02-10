@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="col-6" style="max-width: 675px; margin-bottom: auto; margin-top: auto;">
+      <div class="registrationCard background">
+        <h4 style="text-align: center; font-weight: bold;"> JOB SEEKER REGISTRATION </h4>
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link" *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive [ngClass]="{'active': rla.isActive}"
+            #rla="routerLinkActive"  id="nav-home-tab" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">{{link.label}}</a>
+          </div>
+        </nav>
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        <!-- <nav mat-tab-nav-bar>
+          <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive
+            #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}
+          </a>
+        </nav>
+        <router-outlet></router-outlet> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row side-view">
+  <div class="row">
+    <div class="col-md-12 text-align profileHeader" *ngIf="userData">
+      <h4>Recruiter Profile</h4>
+      <img [src]="profileUrl" class="profilePic">
+      <div class="form-group">
+        <h5>{{userData.username}}</h5>
+      </div>
+    </div>
+    <div class="col-md-12" class="profileBody" *ngIf="userData">
+      <div class="profileText">
+        <label>Qualification</label>
+        <h6>{{userData.username}}</h6>
+      </div>
+      <div class="profileText">
+        <label>Experience</label>
+        <h6>{{userData.YearsOfExperience}}</h6>
+      </div>
+      <div class="profileText">
+        <label>Mobile</label>
+        <h6>{{userData.mobile}}</h6>
+      </div>
+      <div class="profileText">
+        <label>Email</label>
+        <h6>{{userData.email}}</h6>
+      </div>
+    </div>
+    <div class="col-md-12" class="profileBody" *ngIf="!userData">
+      <p>No User data</p>
+    </div>
+    <div class="col-md-12 text-align">
+      <button type="submit" mat-raised-button>Upload CV</button>
+    </div>
+  </div>
+</div>

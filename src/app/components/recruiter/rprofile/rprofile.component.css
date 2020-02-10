@@ -1,0 +1,47 @@
+.row{
+    margin: 0px !important;
+}
+.mat-toolbar-single-row{
+    padding: 0px !important;
+    background-color: rgb(128,93, 200);
+    color: white;
+    margin-bottom: 10px;
+}
+.go-dashboard{
+    color: #805dc8 !important;
+    font-size: 13px;
+    background-color: white;
+    font-weight: bold;
+    padding: 11px 15px;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.profile-pic{
+    height: 2em;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+.logout-btn button{
+    background-color: #805dc8;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 5px;
+    line-height: 32px;
+}
+.logout-btn{
+    padding: 8px 0px;
+}
+.profile-edit{
+    background-color: rgb(128,93, 200); 
+    color: white; 
+    font-weight: bold;
+}
+
+.btn-danger {
+    padding: 4px 1.2rem;
+}
+.background{
+    background: white;
+    border-radius: 5px;
+    padding: 20px 20px 50px 20px;
+}

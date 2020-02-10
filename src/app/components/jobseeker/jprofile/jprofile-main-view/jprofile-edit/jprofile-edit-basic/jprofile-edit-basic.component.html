@@ -1,0 +1,48 @@
+<div class="row" class="mt30">
+  <div class="col-md-12">
+    <form [formGroup]="JSBasicDetailsForm">
+      <div class="col-md-12 ">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.username.invalid && f.username.touched}" class="form-control"
+            placeholder="Username" formControlName="username" readonly>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control"
+            placeholder="Email" formControlName="email" readonly>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.mobile.invalid && f.mobile.touched}" class="form-control"
+            placeholder="Mobile" formControlName="mobile">
+        </div>
+        <div *ngIf="f.mobile.errors && f.mobile.touched" class="invalidStatus">
+          <div *ngIf="f.mobile.errors.required">Mobile no is required</div>
+          <div *ngIf="f.mobile.errors.minlength">10 characters required.</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.address1.invalid && f.address1.touched}" class="form-control"
+            placeholder="Address1" formControlName="address1">
+        </div>
+        <div *ngIf="f.address1.errors && f.address1.touched" class="invalidStatus">
+          <div *ngIf="f.address1.errors.required">Address is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Address2" formControlName="address2">
+        </div>
+      </div>
+      <!-- <div class="col-md-12">
+            <a><mat-checkbox class="termsAndConditions" formControlName="isTosRead">I agree to the terms and conditions</mat-checkbox></a>
+        </div> -->
+      <div class="text-align">
+        <i class="material-icons navigateNextIcon" (click)="onSubmitJSBasicDetailsForm()">navigate_next</i>
+      </div>
+    </form>
+  </div>
+</div>

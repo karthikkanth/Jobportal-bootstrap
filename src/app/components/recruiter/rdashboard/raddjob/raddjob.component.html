@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="AddJobform">
+      <!--company name-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.companyname.invalid && f.companyname.touched}"
+            class="form-control" placeholder="Company Name*" formControlName="companyname">
+        </div>
+        <div *ngIf="f.companyname.errors && f.companyname.touched" class="invalidStatus">
+          <div *ngIf="f.companyname.errors.required">companyname no is required</div>
+        </div>
+      </div>
+      <!--position-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.position.invalid && f.position.touched}" class="form-control"
+            placeholder="Position Name*" formControlName="position">
+        </div>
+        <div *ngIf="f.position.errors && f.position.touched" class="invalidStatus">
+          <div *ngIf="f.position.errors.required">Position is required</div>
+        </div>
+      </div>
+      <!--Experience-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.experience.invalid && f.experience.touched}"
+            class="form-control" placeholder="Experience*" formControlName="experience">
+        </div>
+        <div *ngIf="f.experience.errors && f.experience.touched" class="invalidStatus">
+          <div *ngIf="f.experience.errors.required">experience is required</div>
+        </div>
+      </div>
+      <!--technologies-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.technologies.invalid && f.technologies.touched}"
+            class="form-control" placeholder="Technologies*" formControlName="technologies">
+        </div>
+        <div *ngIf="f.technologies.errors && f.technologies.touched" class="invalidStatus">
+          <div *ngIf="f.technologies.errors.required">technologies is required</div>
+        </div>
+      </div>
+      <!--location-->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.location.invalid && f.location.touched}" class="form-control"
+            placeholder="location*" formControlName="location">
+        </div>
+        <div *ngIf="f.location.errors && f.location.touched" class="invalidStatus">
+          <div *ngIf="f.location.errors.required">location is required</div>
+        </div>
+      </div>
+      <div class="text-align col-md-12 submitbtn">
+        <!-- <i class="material-icons navigateNextIcon" >navigate_next</i>  -->
+        <button type="submit" mat-raised-button (click)="Save()">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

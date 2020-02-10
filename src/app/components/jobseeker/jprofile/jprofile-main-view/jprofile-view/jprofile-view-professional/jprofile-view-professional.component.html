@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12 profile-basic px-4 py-3" *ngIf="userData">
+    <div class="profileText">
+     <label>Current Job Location</label>
+     <h6>{{userData.currentJobLocation}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Years Of Experience In Current Job</label>
+      <h6>{{userData.yearsOfExperienceInCurrentJob}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Job Role</label>
+      <h6>{{userData.JobRole}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Domain</label>
+      <h6>{{userData.domain}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Present Salary</label>
+      <h6>My PresentSalary</h6>
+    </div>         
+    <!-- <div class="text-align">
+      <i class="material-icons navigateNextIcon" (click)="onSubmitJSBasicDetailsForm()" >navigate_next</i> 
+    </div> -->
+</div>
+<div class="col-md-12 profile-basic px-4 py-3" *ngIf="!userData">
+  <p>No Professional details</p>
+</div>
+</div>
+  

@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="JSPersonalDetailsForm">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.YourHomeTown.invalid && f.YourHomeTown.touched}"
+            class="form-control" placeholder="Your Home Town" formControlName="YourHomeTown">
+        </div>
+        <div *ngIf="submitted && f.YourHomeTown.errors" class="invalidStatus">
+          <div *ngIf="f.YourHomeTown.errors.required">Your Home Town is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.AreasofInterest.invalid && f.AreasofInterest.touched}"
+            class="form-control" placeholder="Areas of Interest (Mechanical, Electrical, etc)"
+            formControlName="AreasofInterest">
+        </div>
+        <div *ngIf="submitted && f.AreasofInterest.errors" class="invalidStatus">
+          <div *ngIf="f.AreasofInterest.errors.required">Your Areas of Interest is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.YearsOfExperience.invalid && f.YearsOfExperience.touched}"
+            class="form-control" placeholder="Years Of Experience" formControlName="YearsOfExperience">
+        </div>
+        <div *ngIf="submitted && f.YearsOfExperience.errors" class="invalidStatus">
+          <div *ngIf="f.YearsOfExperience.errors.required">Your Years of Experience is required</div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.MaritalStatus.invalid && f.MaritalStatus.touched}"
+            class="form-control" placeholder="Marital Status" formControlName="MaritalStatus">
+        </div>
+        <div *ngIf="submitted && f.MaritalStatus.errors" class="invalidStatus">
+          <div *ngIf="f.MaritalStatus.errors.required">Your MaritalStatus is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.Nationality.invalid && f.Nationality.touched}"
+            class="form-control" placeholder="Nationality" formControlName="Nationality">
+        </div>        
+        <!-- <div *ngIf="submitted && f.Nationality.errors" class="invalidStatus">
+      <div *ngIf="f.Nationality.errors.required">Your Nationality is required</div>
+    </div> -->
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.LanguagesKnown.invalid && f.LanguagesKnown.touched}"
+            class="form-control" placeholder="Languages Known" formControlName="LanguagesKnown">
+        </div>
+        <!-- <div *ngIf="submitted && f.LanguagesKnown.errors" class="invalidStatus">
+      <div *ngIf="f.LanguagesKnown.errors.required">Your Languages Known is required</div>
+    </div> -->
+      </div>
+      <div class="text-align col-md-12">
+        <i class="material-icons navigateNextIcon" (click)="onSubmitJSPersonalDetailsForm()">navigate_next</i>
+      </div>
+    </form>
+  </div>
+</div>

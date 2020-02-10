@@ -1,0 +1,29 @@
+.mat-raised-button{
+    padding: 2px 2em;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+.profilePic{
+    height: 7em;
+    margin: 5px 0px;
+}
+.profileHeader{
+    padding: 10px 20px;
+}
+.profileBody{
+    padding: 0px 10px 15px 20px;
+}
+.profileText label{
+    font-size: 11px;
+    margin-bottom: 0px;
+}
+
+.side-view{
+    background: white;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 10px 0px;
+  }

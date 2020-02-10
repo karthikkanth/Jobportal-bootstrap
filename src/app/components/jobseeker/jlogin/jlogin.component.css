@@ -1,0 +1,28 @@
+.mat-raised-button{
+    padding: 2px 8em;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+.loginbtn{
+    text-align: center;
+    padding: 5px 3em;
+}
+.email{
+    padding-top: 0.75em;
+}
+.invalidStatus{
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: -16px;
+}
+.text-primary{
+    color:#0275d8!important;
+    cursor: pointer;
+ }
+ a.text-primary:focus,a.text-primary:hover{
+    color:#025aa5
+ }

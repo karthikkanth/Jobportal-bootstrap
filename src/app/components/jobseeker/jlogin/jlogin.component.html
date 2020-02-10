@@ -1,0 +1,31 @@
+<div class="row">
+    <form [formGroup]="JSLoginForm" (ngSubmit)="onSubmitJSLogin()" class="width100">
+    <div class="col-md-12 email">
+      <div class="form-group">
+        <input type="text" [ngClass]="{'fieldError': loginForm.username.invalid && loginForm.username.touched}" class="form-control" placeholder="Username or Email" formControlName="username">
+      </div>
+      <div *ngIf="loginForm.username.errors && loginForm.username.touched" class="invalidStatus">
+        <div *ngIf="loginForm.username.errors.required">Enter username</div>
+        <div *ngIf="loginForm.username.errors.minlength">Enter min 6 chars</div>
+      </div>
+    </div>
+    <div class="col-md-12 mb-4">
+      <input type="password" [ngClass]="{'fieldError': loginForm.password.invalid && loginForm.password.touched}" class="form-control" placeholder="Password" formControlName="password">
+    </div>
+    <div *ngIf="loginForm.password.errors && loginForm.password.touched" class="invalidStatus">
+      <div *ngIf="loginForm.password.errors.required">Enter password</div>
+      <div *ngIf="loginForm.password.errors.minlength">Enter min 6 chars</div>
+    </div>
+    <div class="col-md-12 loginbtn">
+      <button type="submit" class="btn btn-danger" [disabled]="JSLoginForm.invalid">LOGIN</button>
+    </div>
+    <div class="col-md-12">
+      <div class="d-flex justify-content-center links">
+        Don't have an account?<a (click)="redirectToSignup()" class="text-primary">Sign Up</a>
+      </div>
+      <div class="d-flex justify-content-center links">
+        <a href="#">Forgot your password?</a>
+      </div>
+    </div>
+    </form>
+  </div>

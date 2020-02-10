@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12 profile-basic px-4 py-3" *ngIf="userData">
+    <div class="profileText">
+     <label>Your Home Town</label>
+     <h6>{{userData.YourHomeTown}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Areas of Interest</label>
+      <h6>{{userData.AreasOfInterest}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Years Of Experience</label>
+      <h6>{{userData.YearsOfExperience}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Marital Status</label>
+      <h6>{{userData.MartialStatus}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Nationality</label>
+      <h6>{{userData.Nationality}}</h6>
+    </div>   
+    <div class="profileText">
+      <label>Languages Known</label>
+      <h6>{{userData.LanguagesKnown}}</h6>
+    </div>      
+</div>
+<div class="col-md-12" *ngIf="!userData">
+    <p>No Personal details</p>
+  </div>
+<div class="col-md-12 profile-basic px-4 py-3">
+    <div class="text-align">
+      <i class="material-icons navigateNextIcon" (click)="onSubmitJSPersonalDetailsForm()" >navigate_next</i> 
+    </div>
+</div>
+</div>
+  

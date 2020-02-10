@@ -1,0 +1,19 @@
+.submitbtn{
+    text-align: center;
+    padding: 5px 3em;
+}
+.mat-raised-button{
+    padding: 2px 6em;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+
+.invalidStatus{
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: -16px;
+}

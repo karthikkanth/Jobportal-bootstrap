@@ -1,0 +1,18 @@
+.signinCard{
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+.container{
+    height: 100%;
+    align-content: center;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-radius: 25px;
+    background: rgb(128,93, 200);
+    color: white;
+}
+.nav-tabs{
+    border: 1px solid black;
+    border-radius: 25px;
+}

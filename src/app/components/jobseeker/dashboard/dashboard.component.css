@@ -1,0 +1,38 @@
+.mat-raised-button{
+    padding: 0px 2em;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+.header{
+    padding: 5px 3em;
+    background-color: white;
+    width: 100%;
+}
+.go-profile{
+    //background-color: #805dc8 !important;
+    font-size: 15px;
+    color: #805dc8 !important;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 3rem;
+    border: 1px solid #805dc8;
+    cursor: pointer;
+}
+.go-profile:hover{
+    opacity: 0.85;
+    background-color: #805dc8;
+    color: white !important;
+}
+.logout-btn button{
+    background-color: #805dc8;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 5px;
+    line-height: 32px;
+}
+.logout-btn{
+    padding: 8px 0px;
+}

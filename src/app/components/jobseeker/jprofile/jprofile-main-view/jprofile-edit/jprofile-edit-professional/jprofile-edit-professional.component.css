@@ -1,0 +1,9 @@
+.update-profile-btn{
+    background-color: #805dc8;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+.update-profile-btn:hover{
+    opacity: 0.85;
+}

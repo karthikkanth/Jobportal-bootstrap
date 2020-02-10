@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12 profile-basic px-4 py-3" *ngIf="userData">
+    <div class="profileText">
+     <label>Username</label>
+     <h6>{{userData.username}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Email</label>
+      <h6>{{userData.email}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Mobile No</label>
+      <h6>{{userData.mobile}}</h6>
+    </div>
+    <div class="profileText">
+      <label>CompanyName</label>
+      <h6>{{userData.companyName}}</h6>
+    </div>   
+    <div class="profileText">
+      <label>Industry Type</label>
+      <h6>{{userData.industryType}}</h6>
+    </div>      
+  </div>
+  <div class="col-md-12" *ngIf="!userData">
+    <p>No Basic details</p>
+  </div>
+  <div class="col-md-12 profile-basic px-4 py-3">
+      <div class="text-align">
+        <i class="material-icons navigateNextIcon" (click)="onSubmitRCBasicDetailsForm()" >navigate_next</i> 
+      </div>
+  </div>
+  
+</div>

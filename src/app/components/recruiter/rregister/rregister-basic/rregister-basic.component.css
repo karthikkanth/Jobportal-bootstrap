@@ -1,0 +1,11 @@
+.email{
+    padding-top: 0.75em;
+}
+.invalidStatus{
+    color: red;
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: -16px;
+}
+
+ 

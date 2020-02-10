@@ -1,0 +1,65 @@
+<div style="background-color: #f5f5f5; height: 100vh;">
+  <!-- <div class="row header">
+      <div class="col-md-6">
+      </div>
+      <div class="offset-md-5 col-md-1 logout-btn">
+        <button type="submit" mat-raised-button >LOGOUT</button>
+      </div>
+    </div> -->
+  <div class="row toolbar-single-row">
+      <div class="col-md-9 col-xs-6">
+        <a class="go-dashboard" (click)="redirectToDashboard()">DASHBOARD</a>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <div class="row">
+          <div class="offset-md-2 col-md-7 col-sm-9">
+            <!-- <p style="margin: 0px; font-size: 16px; font-weight: bold;">My Name Anonymous</p>
+            <label>My Designation</label> -->
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="dropdown">
+              <img [src]="profileUrl" class="profile-pic dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" (click)="redirectToSignin()">LOGOUT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row" style="margin: 0px;">
+    <div class="col-md-3">
+      <app-jprofile-side-view></app-jprofile-side-view>
+    </div>
+    <div class="col-md-9">
+      <div class="background">
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <h5>JOB SEEKER PROFILE DETAILS</h5>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <button type="submit" class="profile-edit btn btn-danger" *ngIf="isView"
+              (click)="clickToProfileEdit('EDIT')">EDIT</button>
+            <button type="submit" class="profile-edit btn btn-danger" *ngIf="isEdit"
+              (click)="clickToProfileEdit('VIEW')">VIEW</button>
+          </div>
+        </div>
+        <nav class="col-8 mt-1 mb-1">
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link" *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive
+              [ngClass]="{'active': rla.isActive}" #rla="routerLinkActive" id="nav-home-tab" data-toggle="tab"
+              role="tab" aria-controls="nav-home" aria-selected="true">{{link.label}}</a>
+          </div>
+        </nav>
+        <!-- <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive
+              #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}
+            </a>
+          </nav> -->
+        <app-jprofile-view *ngIf="isView"></app-jprofile-view>
+        <app-jprofile-edit *ngIf="isEdit"></app-jprofile-edit>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12 profile-basic px-4 py-3" *ngIf="userData">
+    <div class="profileText">
+     <label>Contact Person Name</label>
+     <h6>{{userData.contactPersonName}}</h6>
+    </div>           
+    <div class="profileText">
+      <label>Designation</label>
+      <h6>{{userData.designation}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Office Address</label>
+      <h6>{{userData.officeAddress}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Country</label>
+      <h6>{{userData.country}}</h6>
+    </div>
+    <div class="profileText">
+      <label>City</label>
+      <h6>{{userData.city}}</h6>
+    </div>   
+    <div class="profileText">
+      <label>Zipcode</label>
+      <h6>{{userData.pincode}}</h6>
+    </div>      
+</div>
+<div class="col-md-12" *ngIf="!userData">
+    <p>No Personal details</p>
+  </div>
+<div class="col-md-12 profile-basic px-4 py-3">
+    <div class="text-align">
+      <i class="material-icons navigateNextIcon" (click)="onSubmitRCPersonalDetailsForm()" >navigate_next</i> 
+    </div>
+</div>
+</div>
+ 

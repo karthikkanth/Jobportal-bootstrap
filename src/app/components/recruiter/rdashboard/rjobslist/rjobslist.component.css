@@ -1,0 +1,19 @@
+.mat-table{
+    width: 100% !important;
+}
+.mat-raised-button{
+    padding: 0px 2.5em;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+.displayValue{
+    color: red;
+    font-size: 14px;
+    height: 18px;
+}
+.mat-row{
+    text-align: left;
+}

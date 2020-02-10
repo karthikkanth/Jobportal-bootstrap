@@ -1,0 +1,80 @@
+.mat-raised-button{
+    padding: 2px 2em;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: rgb(128,93, 200);
+    color: white;
+}
+.profilePic{
+    height: 7em;
+    margin: 5px 0px;
+}
+.profileHeader{
+    padding: 0px 20px;
+}
+.profileBody{
+    padding: 0px 10px 7px 20px;
+}
+.profileText label{
+    font-size: 11px;
+    margin-bottom: 0px;
+}
+
+
+/* profile picture css */
+p {
+    font-family: Lato;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .hoverable{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 160px;
+    width: 160px;
+    border: 5px solid #000;
+    border-radius: 50%;
+  }
+  .hoverable .hover-text{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left:  50%;
+    font-weight: bold;
+    transform: translate(-50%,-50%);   
+    z-index: 2;
+  }
+  .hoverable .background{
+    position: absolute;
+    display: none;
+    top: 0;
+    left:  0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .hoverable:hover .hover-text{
+    display: block;
+  }
+  .hoverable:hover .background{
+    display: block;
+  }
+  
+  #fileInput{
+    display: none;
+  }
+  .side-view{
+    background: white;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding: 10px 0px;
+  }

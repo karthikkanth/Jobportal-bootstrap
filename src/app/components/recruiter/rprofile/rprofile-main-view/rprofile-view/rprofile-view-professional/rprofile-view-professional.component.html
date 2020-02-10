@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-12 profile-basic px-4 py-3" *ngIf="userData">
+    <div class="profileText">
+     <label>State</label>
+     <h6>{{userData.state | uppercase }}</h6>
+    </div>
+    <div class="profileText">
+      <label>Alternate Email</label>
+      <h6>{{userData.alternateEmailId}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Alternate Phone</label>
+      <h6>{{userData.landlineNumber}}</h6>
+
+      <div class="info">Raw Value: {{userData.landlineNumber }}</div>
+      <div class="info">Filtered Value: {{userData.landlineNumber  }}</div>
+
+    </div>
+   <!-- <div class="profileText">
+      <label>Domain</label>
+      <h6>{{userData.domain}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Present Salary</label>
+      <h6>My PresentSalary</h6>
+    </div>
+     <div class="text-align">
+          <i class="material-icons navigateNextIcon" (click)="onSubmitJSBasicDetailsForm()" >navigate_next</i> 
+        </div> -->
+</div>
+<div class="col-md-12 profile-basic px-4 py-3" *ngIf="!userData">
+  <p>No Professional details</p>
+</div>
+</div>
+  

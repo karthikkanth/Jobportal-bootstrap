@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="JSProfessionalForm">
+        <!--Current Job location -->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.currentJobLocation.invalid && f.currentJobLocation.touched}"
+            class="form-control" placeholder="Your Current /Last job location" formControlName="currentJobLocation">
+        </div>
+        <div *ngIf="submitted && f.currentJobLocation.errors" class="invalidStatus">
+          <div *ngIf="f.currentJobLocation.errors.required">Your Current Job location is required</div>
+        </div>
+      </div>
+       <!--yearsOfExperienceInCurrentJob -->
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text"
+            [ngClass]="{'fieldError': f.yearsOfExperienceInCurrentJob.invalid && f.yearsOfExperienceInCurrentJob.touched}"
+            class="form-control" placeholder="Years of experience in last /current job"
+            formControlName="yearsOfExperienceInCurrentJob">
+        </div>
+        <div *ngIf="submitted && f.yearsOfExperienceInCurrentJob.errors" class="invalidStatus">
+          <div *ngIf="f.yearsOfExperienceInCurrentJob.errors.required">Your yearsOfExperienceInCurrentJob is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+
+
+        <div class="form-group ">
+          <select formControlName="JobRole" class="form-control" >
+            <option value="" disabled selected> Industry types </option>
+            <option *ngFor='let jobrole of jobRoles' [value]="jobrole.role">
+              {{jobrole.role}}
+            </option>
+          </select>
+        </div>
+
+
+        <div *ngIf="submitted && f.JobRole.errors" class="invalidStatus">
+          <div *ngIf="f.JobRole.errors.required">Your Home Town is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.Domain.invalid && f.Domain.touched}" class="form-control"
+            placeholder="Domain" formControlName="Domain">
+        </div>
+        <div *ngIf="submitted && f.Domain.errors" class="invalidStatus">
+          <div *ngIf="f.Domain.errors.required">Your domain is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" [ngClass]="{'fieldError': f.PresentSalary.invalid && f.PresentSalary.touched}"
+            class="form-control" placeholder="Present /Previous Salary" formControlName="PresentSalary">
+        </div>
+        <div *ngIf="submitted && f.PresentSalary.errors" class="invalidStatus">
+          <div *ngIf="f.PresentSalary.errors.required">Your Home Town is required</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text"
+            [ngClass]="{'fieldError': f.reasonsForLeavingCurrentJob.invalid && f.reasonsForLeavingCurrentJob.touched}"
+            class="form-control" placeholder="Reason for  Leaving current /last job"
+            formControlName="reasonsForLeavingCurrentJob">
+        </div>
+        <div *ngIf="submitted && f.reasonsForLeavingCurrentJob.errors" class="invalidStatus">
+          <div *ngIf="f.reasonsForLeavingCurrentJob.errors.required">Your Home Town is required</div>
+        </div>
+      </div>
+      <div class="text-align col-md-12 submitbtn">
+        <!-- <i class="material-icons navigateNextIcon" >navigate_next</i>  -->
+        <button type="submit" mat-raised-button (click)="onSubmitJSProfessionalDetails()"
+          class="update-profile-btn">Update Profile</button>
+      </div>
+    </form>
+  </div>
+</div>

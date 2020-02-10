@@ -1,0 +1,71 @@
+<div class="row" class="mt30">
+  <div class="col-md-12">
+  <form [formGroup]="RCBasicDetailsForm">
+        <div class="col-md-12 ">
+
+          <div class="form-group">
+            <input type="text" [ngClass]="{'fieldError': f.username.invalid && f.username.touched}" class="form-control"
+              placeholder="UserName" formControlName="username" readonly>
+          </div>
+
+          <!-- <div *ngIf="submitted && f.username.errors" class="invalidStatus">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div> -->
+        </div> 
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="email" [ngClass]="{'fieldError': f.email.invalid && f.email.touched}" class="form-control"
+              placeholder="Email" formControlName="email" readonly>
+          </div>
+          <!-- <div *ngIf="submitted && f.email.errors" class="invalidStatus">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.pattern">Invalid Email</div>
+          </div> -->
+        </div>
+        <!-- <div class="col-md-12">
+          <mat-form-field >
+            <input matInput placeholder="Password*" formControlName="password">
+          </mat-form-field>
+          <div *ngIf="submitted && f.password.errors" class="invalidStatus">
+            <div *ngIf="f.password.errors.required">Email is required</div>
+            <div *ngIf="f.password.errors.minlength">Min 6 characters.</div>
+          </div>
+        </div> -->
+        
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="text" [ngClass]="{'fieldError': f.mobile.invalid && f.mobile.touched}" class="form-control"
+              placeholder="Mobile" formControlName="mobile">
+          </div>
+          <div *ngIf="submitted && f.mobile.errors" class="invalidStatus">
+            <div *ngIf="f.mobile.errors.required">Mobile no is required</div>
+            <div *ngIf="f.mobile.errors.minlength">10 characters required.</div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="text" [ngClass]="{'fieldError': f.companyName.invalid && f.companyName.touched}"
+              class="form-control" placeholder="Company Name" formControlName="companyName">
+          </div>
+          <div *ngIf="submitted && f.companyName.errors" class="invalidStatus">
+            <div *ngIf="f.companyName.errors.required">Address is required</div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group ">
+            <select formControlName="industryType" class="form-control" >
+              <option value="" disabled selected> Industry types </option>
+              <option *ngFor='let industry of types' [value]="industry.value">{{industry.viewValue}}
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- <div class="col-md-12">
+            <a><mat-checkbox class="termsAndConditions" formControlName="isTosRead">I agree to the terms and conditions</mat-checkbox></a>
+        </div> -->
+        <div class="text-align">
+            <i class="material-icons navigateNextIcon" (click)="onSubmitRCBasicDetailsForm()" >navigate_next</i> 
+        </div>
+  </form>
+</div>
+</div>

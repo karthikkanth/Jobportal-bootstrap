@@ -1,0 +1,60 @@
+<div style="text-align: center;">
+  <div class="displayValue">
+    <span *ngIf="displayValue">{{displayValue}}</span>
+  </div>
+  <table id="example" class="table" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+    class="row-border hover">
+    <thead>
+      <tr>
+        <th *ngFor="let key of jobsListKeys">{{key}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let job of jobsList; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{job.companyname}}</td>
+        <td>{{job.position}}</td>
+        <td>{{job.experience}}</td>
+        <td>{{job.technologies}}</td>
+        <td>{{job.location}}</td>
+        <td><button class="btn btn-danger" (click)="applyForSpecificJob(i)">{{job.apply}} </button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="companyname">
+      <th mat-header-cell *matHeaderCellDef> Company Name
+        <mat-form-field class="filter" floatLabel="never">
+          <mat-label>Search</mat-label>
+          <input matInput [formControl]="nameFilter">
+        </mat-form-field> 
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.companyname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> Position </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+    <ng-container matColumnDef="experience">
+      <th mat-header-cell *matHeaderCellDef> Experience </th>
+      <td mat-cell *matCellDef="let element"> {{element.experience}}  </td>
+    </ng-container>
+    <ng-container matColumnDef="technologies">
+      <th mat-header-cell *matHeaderCellDef> Technologies </th>
+      <td mat-cell *matCellDef="let element"> {{element.technologies}} </td>
+    </ng-container>
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef> Location </th>
+      <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+    </ng-container>
+    <ng-container matColumnDef="apply">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element; let i= index"> <button mat-raised-button (click)="applyForSpecificJob(i)">{{element.apply}} </button></td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div *ngIf="dataSource.length == 0">
+    <p>No Jobs available to apply</p>
+  </div> -->
+</div>

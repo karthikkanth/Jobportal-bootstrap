@@ -1,0 +1,38 @@
+<div class="row side-view">
+  <div class="col-md-12 text-align profileHeader" *ngIf="userData">
+    <h4>PROFILE</h4>
+    <label class="hoverable" for="fileInput" style="margin: auto;">
+      <img [src]="userData.profilePic ? userData.profilePic : 'https://www.w3schools.com/howto/img_avatar.png'">
+      <div class="hover-text">Choose file</div>
+      <div class="background"></div>
+    </label>
+    <br />
+    <input id="fileInput" type='file' (change)="onSelectFile($event)">
+    <!-- <button *ngIf="url" (click)="delete()" >delete</button> -->
+    <h5>{{userData.username}}</h5>
+  </div>
+  <div class="col-md-12" class="profileBody" *ngIf="userData">
+    <div class="profileText">
+      <label>Qualification</label>
+      <h6>{{userData.username}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Experience</label>
+      <h6>{{userData.YearsOfExperience}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Mobile</label>
+      <h6>{{userData.mobile}}</h6>
+    </div>
+    <div class="profileText">
+      <label>Email</label>
+      <h6>{{userData.email}}</h6>
+    </div>
+  </div>
+  <div class="col-md-12" class="profileBody" *ngIf="!userData">
+    <p>No User data</p>
+  </div>
+  <div class="col-md-12 text-align">
+    <button type="submit" class="btn btn-danger">Upload CV</button>
+  </div>
+</div>
